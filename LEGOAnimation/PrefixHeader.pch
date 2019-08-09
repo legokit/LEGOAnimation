@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  LEGOAnimation
+//
+//  Created by 杨庆人 on 2019/8/5.
+//  Copyright © 2019年 杨庆人. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <Masonry/Masonry.h>
+
+#define LEGOScreenWidth [UIScreen mainScreen].bounds.size.width
+#define LEGOScreenHeight [UIScreen mainScreen].bounds.size.height
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
