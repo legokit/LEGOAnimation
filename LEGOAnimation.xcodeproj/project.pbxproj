@@ -18,8 +18,19 @@
 		E864517F22F918B0002FD21B /* LEGOKeyFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E864517E22F918B0002FD21B /* LEGOKeyFrameViewController.m */; };
 		E864518222F918E6002FD21B /* LEGOBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E864518122F918E6002FD21B /* LEGOBaseViewController.m */; };
 		E864518622F97A13002FD21B /* LEGOStretchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E864518522F97A13002FD21B /* LEGOStretchViewController.m */; };
-		E864DF8622FD073E001D15D8 /* LEGOSimuationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E864DF8522FD073E001D15D8 /* LEGOSimuationViewController.m */; };
 		E871618E22F82CF3008B5EF7 /* LEGOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E871618D22F82CF3008B5EF7 /* LEGOViewController.m */; };
+		E873B05723039D8A00DB81C1 /* LEGOKnobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E873B05623039D8A00DB81C1 /* LEGOKnobViewController.m */; };
+		E873B05E2303DEF900DB81C1 /* LEGOKnobView.m in Sources */ = {isa = PBXBuildFile; fileRef = E873B05D2303DEF800DB81C1 /* LEGOKnobView.m */; };
+		E873B0612303EF2600DB81C1 /* LEGOSimuationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E873B0602303EF2600DB81C1 /* LEGOSimuationView.m */; };
+		E87423F82302577400F76BFB /* LEGOSimuationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E87423F62302577400F76BFB /* LEGOSimuationViewController.m */; };
+		E87423FF2302956A00F76BFB /* LEGOSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E87423FE2302956A00F76BFB /* LEGOSceneViewController.m */; };
+		E87424052302AA6700F76BFB /* doraemon.zip in Resources */ = {isa = PBXBuildFile; fileRef = E87424042302AA6700F76BFB /* doraemon.zip */; };
+		E87424082302AAEC00F76BFB /* LEGODoraemonView.m in Sources */ = {isa = PBXBuildFile; fileRef = E87424072302AAEC00F76BFB /* LEGODoraemonView.m */; };
+		E874240A2302B74000F76BFB /* film.zip in Resources */ = {isa = PBXBuildFile; fileRef = E87424092302B74000F76BFB /* film.zip */; };
+		E874240C2302B7FD00F76BFB /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = E874240B2302B7FD00F76BFB /* image.png */; };
+		E874240F2302D54900F76BFB /* LEGOSceneView.m in Sources */ = {isa = PBXBuildFile; fileRef = E874240E2302D54900F76BFB /* LEGOSceneView.m */; };
+		E87424122302D95700F76BFB /* image_111.png in Resources */ = {isa = PBXBuildFile; fileRef = E87424102302D95700F76BFB /* image_111.png */; };
+		E87424132302D95700F76BFB /* image_222.png in Resources */ = {isa = PBXBuildFile; fileRef = E87424112302D95700F76BFB /* image_222.png */; };
 		FC14C4388DC398765F10B0BF /* libPods-LEGOAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 522B25FDEEEC2A1F834CC5BC /* libPods-LEGOAnimation.a */; };
 /* End PBXBuildFile section */
 
@@ -66,11 +77,28 @@
 		E864518122F918E6002FD21B /* LEGOBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOBaseViewController.m; sourceTree = "<group>"; };
 		E864518422F97A13002FD21B /* LEGOStretchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOStretchViewController.h; sourceTree = "<group>"; };
 		E864518522F97A13002FD21B /* LEGOStretchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOStretchViewController.m; sourceTree = "<group>"; };
-		E864DF8422FD073E001D15D8 /* LEGOSimuationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOSimuationViewController.h; sourceTree = "<group>"; };
-		E864DF8522FD073E001D15D8 /* LEGOSimuationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOSimuationViewController.m; sourceTree = "<group>"; };
 		E871618C22F82CF3008B5EF7 /* LEGOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOViewController.h; sourceTree = "<group>"; };
 		E871618D22F82CF3008B5EF7 /* LEGOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOViewController.m; sourceTree = "<group>"; };
 		E871619522F83C16008B5EF7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E873B05523039D8A00DB81C1 /* LEGOKnobViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOKnobViewController.h; sourceTree = "<group>"; };
+		E873B05623039D8A00DB81C1 /* LEGOKnobViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOKnobViewController.m; sourceTree = "<group>"; };
+		E873B05C2303DEF800DB81C1 /* LEGOKnobView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOKnobView.h; sourceTree = "<group>"; };
+		E873B05D2303DEF800DB81C1 /* LEGOKnobView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOKnobView.m; sourceTree = "<group>"; };
+		E873B05F2303EF2600DB81C1 /* LEGOSimuationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOSimuationView.h; sourceTree = "<group>"; };
+		E873B0602303EF2600DB81C1 /* LEGOSimuationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOSimuationView.m; sourceTree = "<group>"; };
+		E87423F62302577400F76BFB /* LEGOSimuationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGOSimuationViewController.m; sourceTree = "<group>"; };
+		E87423F72302577400F76BFB /* LEGOSimuationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGOSimuationViewController.h; sourceTree = "<group>"; };
+		E87423FD2302956A00F76BFB /* LEGOSceneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOSceneViewController.h; sourceTree = "<group>"; };
+		E87423FE2302956A00F76BFB /* LEGOSceneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOSceneViewController.m; sourceTree = "<group>"; };
+		E87424042302AA6700F76BFB /* doraemon.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = doraemon.zip; sourceTree = "<group>"; };
+		E87424062302AAEC00F76BFB /* LEGODoraemonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGODoraemonView.h; sourceTree = "<group>"; };
+		E87424072302AAEC00F76BFB /* LEGODoraemonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGODoraemonView.m; sourceTree = "<group>"; };
+		E87424092302B74000F76BFB /* film.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = film.zip; sourceTree = "<group>"; };
+		E874240B2302B7FD00F76BFB /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		E874240D2302D54900F76BFB /* LEGOSceneView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOSceneView.h; sourceTree = "<group>"; };
+		E874240E2302D54900F76BFB /* LEGOSceneView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOSceneView.m; sourceTree = "<group>"; };
+		E87424102302D95700F76BFB /* image_111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_111.png; sourceTree = "<group>"; };
+		E87424112302D95700F76BFB /* image_222.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_222.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +147,6 @@
 		E85B04E522DD6118001501A9 = {
 			isa = PBXGroup;
 			children = (
-				E864DF8322FD072C001D15D8 /* LEGOSimulation */,
 				E85B04F022DD6119001501A9 /* LEGOAnimation */,
 				E85B050922DD611A001501A9 /* LEGOAnimationTests */,
 				E85B051422DD611A001501A9 /* LEGOAnimationUITests */,
@@ -142,6 +169,9 @@
 		E85B04F022DD6119001501A9 /* LEGOAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				E87423FC2302954800F76BFB /* LEGOSceneAnimation */,
+				E873B05423039D7900DB81C1 /* LEGOKnobAnimation */,
+				E87423F52302577400F76BFB /* LEGOSimulation */,
 				E864518322F979F7002FD21B /* LEGOContentStretch */,
 				E864517C22F918A0002FD21B /* LEGOKeyFrameAnimation */,
 				E871618F22F839E6008B5EF7 /* LEGOBaseAnimaiton */,
@@ -197,16 +227,6 @@
 			path = LEGOContentStretch;
 			sourceTree = "<group>";
 		};
-		E864DF8322FD072C001D15D8 /* LEGOSimulation */ = {
-			isa = PBXGroup;
-			children = (
-				E864DF8422FD073E001D15D8 /* LEGOSimuationViewController.h */,
-				E864DF8522FD073E001D15D8 /* LEGOSimuationViewController.m */,
-			);
-			name = LEGOSimulation;
-			path = LEGOAnimation/LEGOSimulation;
-			sourceTree = "<group>";
-		};
 		E871618F22F839E6008B5EF7 /* LEGOBaseAnimaiton */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +234,46 @@
 				E864518122F918E6002FD21B /* LEGOBaseViewController.m */,
 			);
 			path = LEGOBaseAnimaiton;
+			sourceTree = "<group>";
+		};
+		E873B05423039D7900DB81C1 /* LEGOKnobAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E873B05523039D8A00DB81C1 /* LEGOKnobViewController.h */,
+				E873B05623039D8A00DB81C1 /* LEGOKnobViewController.m */,
+				E873B05C2303DEF800DB81C1 /* LEGOKnobView.h */,
+				E873B05D2303DEF800DB81C1 /* LEGOKnobView.m */,
+			);
+			path = LEGOKnobAnimation;
+			sourceTree = "<group>";
+		};
+		E87423F52302577400F76BFB /* LEGOSimulation */ = {
+			isa = PBXGroup;
+			children = (
+				E87423F72302577400F76BFB /* LEGOSimuationViewController.h */,
+				E87423F62302577400F76BFB /* LEGOSimuationViewController.m */,
+				E873B05F2303EF2600DB81C1 /* LEGOSimuationView.h */,
+				E873B0602303EF2600DB81C1 /* LEGOSimuationView.m */,
+			);
+			path = LEGOSimulation;
+			sourceTree = "<group>";
+		};
+		E87423FC2302954800F76BFB /* LEGOSceneAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E87423FD2302956A00F76BFB /* LEGOSceneViewController.h */,
+				E87423FE2302956A00F76BFB /* LEGOSceneViewController.m */,
+				E87424062302AAEC00F76BFB /* LEGODoraemonView.h */,
+				E87424072302AAEC00F76BFB /* LEGODoraemonView.m */,
+				E874240D2302D54900F76BFB /* LEGOSceneView.h */,
+				E874240E2302D54900F76BFB /* LEGOSceneView.m */,
+				E87424092302B74000F76BFB /* film.zip */,
+				E874240B2302B7FD00F76BFB /* image.png */,
+				E87424042302AA6700F76BFB /* doraemon.zip */,
+				E87424102302D95700F76BFB /* image_111.png */,
+				E87424112302D95700F76BFB /* image_222.png */,
+			);
+			path = LEGOSceneAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,9 +380,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E87424132302D95700F76BFB /* image_222.png in Resources */,
 				E85B04FE22DD611A001501A9 /* LaunchScreen.storyboard in Resources */,
 				E85B04FB22DD611A001501A9 /* Assets.xcassets in Resources */,
+				E87424052302AA6700F76BFB /* doraemon.zip in Resources */,
 				E85B04F922DD6119001501A9 /* Main.storyboard in Resources */,
+				E874240A2302B74000F76BFB /* film.zip in Resources */,
+				E874240C2302B7FD00F76BFB /* image.png in Resources */,
+				E87424122302D95700F76BFB /* image_111.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,13 +438,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E85B04F622DD6119001501A9 /* ViewController.m in Sources */,
+				E873B0612303EF2600DB81C1 /* LEGOSimuationView.m in Sources */,
+				E873B05723039D8A00DB81C1 /* LEGOKnobViewController.m in Sources */,
 				E864518622F97A13002FD21B /* LEGOStretchViewController.m in Sources */,
 				E864518222F918E6002FD21B /* LEGOBaseViewController.m in Sources */,
 				E871618E22F82CF3008B5EF7 /* LEGOViewController.m in Sources */,
+				E873B05E2303DEF900DB81C1 /* LEGOKnobView.m in Sources */,
 				E85B050122DD611A001501A9 /* main.m in Sources */,
+				E87424082302AAEC00F76BFB /* LEGODoraemonView.m in Sources */,
 				E864517F22F918B0002FD21B /* LEGOKeyFrameViewController.m in Sources */,
 				E85B04F322DD6119001501A9 /* AppDelegate.m in Sources */,
-				E864DF8622FD073E001D15D8 /* LEGOSimuationViewController.m in Sources */,
+				E87423F82302577400F76BFB /* LEGOSimuationViewController.m in Sources */,
+				E874240F2302D54900F76BFB /* LEGOSceneView.m in Sources */,
+				E87423FF2302956A00F76BFB /* LEGOSceneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +626,7 @@
 				DEVELOPMENT_TEAM = K7Y7L52Z4E;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LEGOAnimation/PrefixHeader.pch";
 				INFOPLIST_FILE = LEGOAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -574,6 +646,7 @@
 				DEVELOPMENT_TEAM = K7Y7L52Z4E;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LEGOAnimation/PrefixHeader.pch";
 				INFOPLIST_FILE = LEGOAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

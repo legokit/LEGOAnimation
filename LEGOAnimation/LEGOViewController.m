@@ -13,6 +13,8 @@
 #import "LEGOKeyFrameViewController.h"
 #import "LEGOStretchViewController.h"
 #import "LEGOSimuationViewController.h"
+#import "LEGOSceneViewController.h"
+#import "LEGOKnobViewController.h"
 
 @interface LEGOViewController ()
 @property (nonatomic, strong) UITableView *tableView;
@@ -41,8 +43,10 @@
     
     self.dataSource = @[@{@"section":@"基础动画",@"row":@[@"缩放",@"旋转",@"渐变"]},
                         @{@"section":@"关键帧",@"row":@[@"关键帧",@"路径",@"抖动"]},
-                        @{@"section":@"形变动画",@"row":@[@"挤压",@"拉扯",@"形变"]},
-                        @{@"section":@"仿真",@"row":@[@"翻转"]}];
+                        @{@"section":@"形变",@"row":@[@"挤压",@"拉扯",@"形变"]},
+                        @{@"section":@"仿真（一）",@"row":@[@"旋钮"]},
+                        @{@"section":@"仿真（二）",@"row":@[@"翻转"]},
+                        @{@"section":@"场景",@"row":@[@"场景动画"]},];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -88,7 +92,17 @@
         }
             break;
         case 3: {
+            LEGOKnobViewController *vc = [[LEGOKnobViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 4: {
             LEGOSimuationViewController *vc = [[LEGOSimuationViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 5: {
+            LEGOSceneViewController *vc = [[LEGOSceneViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
