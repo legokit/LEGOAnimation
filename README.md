@@ -1,6 +1,6 @@
 # LEGOAnimation
 
-![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOMianVc.jpeg)
+![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOMianVc1.jpeg)
 
 ## 基础动画
 ![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOBaseAnimaiton.gif)
@@ -15,7 +15,7 @@
 ![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOKnobAnimation.gif)
 
 ## 仿真（二）
-![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOSimulation.gif)
+![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOSimulation1.gif)
 
 
 ## Author
