@@ -15,6 +15,7 @@
 #import "LEGOSimuationViewController.h"
 #import "LEGOSceneViewController.h"
 #import "LEGOKnobViewController.h"
+#import "LEGORouletteViewController.h"
 
 @interface LEGOViewController ()
 @property (nonatomic, strong) UITableView *tableView;
@@ -45,7 +46,8 @@
                         @{@"section":@"关键帧",@"row":@[@"关键帧",@"路径",@"抖动"]},
                         @{@"section":@"形变",@"row":@[@"挤压",@"拉扯",@"形变"]},
                         @{@"section":@"仿真（一）",@"row":@[@"旋钮"]},
-                        @{@"section":@"仿真（二）",@"row":@[@"翻转"]},
+                        @{@"section":@"仿真（二）",@"row":@[@"轮盘"]},
+                        @{@"section":@"仿真（三）",@"row":@[@"翻转"]},
                         @{@"section":@"场景",@"row":@[@"场景动画"]},];
     
     [self.view addSubview:self.tableView];
@@ -97,11 +99,16 @@
         }
             break;
         case 4: {
-            LEGOSimuationViewController *vc = [[LEGOSimuationViewController alloc] init];
+            LEGORouletteViewController *vc = [[LEGORouletteViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case 5: {
+            LEGOSimuationViewController *vc = [[LEGOSimuationViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 6: {
             LEGOSceneViewController *vc = [[LEGOSceneViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
