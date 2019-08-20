@@ -14,7 +14,7 @@
 ## 仿真（三）transform 3D
 ![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOTransform.gif)
 
-## 仿真（四）transform 3D + CASpringAnimation
+## 仿真（四）翻转
 ![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOSimulation1.gif)
 
 ## Author
