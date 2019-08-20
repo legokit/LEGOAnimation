@@ -10,18 +10,18 @@
 //  Copyright © 2019年 杨庆人. All rights reserved.
 //
 
-#import "LEGOSimuationViewController.h"
-#import "LEGOSimuationView.h"
+#import "LEGOCASpringViewController.h"
+#import "LEGOCASpringView.h"
 
-@interface LEGOSimuationViewController ()
-@property (nonatomic, strong) LEGOSimuationView *simuationView;
+@interface LEGOCASpringViewController ()
+@property (nonatomic, strong) LEGOCASpringView *simuationView;
 @end
 
-@implementation LEGOSimuationViewController
+@implementation LEGOCASpringViewController
 
-- (LEGOSimuationView *)simuationView {
+- (LEGOCASpringView *)simuationView {
     if (!_simuationView) {
-        _simuationView = [[LEGOSimuationView alloc] init];
+        _simuationView = [[LEGOCASpringView alloc] init];
     }
     return _simuationView;
 }

@@ -9,13 +9,14 @@
 
 #import "LEGOViewController.h"
 #import <Masonry/Masonry.h>
-#import "LEGOBaseViewController.h"
-#import "LEGOKeyFrameViewController.h"
+#import "LEGOCABasicViewController.h"
+#import "LEGOCAKeyframeViewController.h"
 #import "LEGOStretchViewController.h"
-#import "LEGOSimuationViewController.h"
+#import "LEGOCASpringViewController.h"
 #import "LEGOSceneViewController.h"
 #import "LEGOKnobViewController.h"
 #import "LEGORouletteViewController.h"
+#import "LEGOTransformViewController.h"
 
 @interface LEGOViewController ()
 @property (nonatomic, strong) UITableView *tableView;
@@ -47,7 +48,8 @@
                         @{@"section":@"形变",@"row":@[@"挤压",@"拉扯",@"形变"]},
                         @{@"section":@"仿真（一）",@"row":@[@"旋钮"]},
                         @{@"section":@"仿真（二）",@"row":@[@"轮盘"]},
-                        @{@"section":@"仿真（三）",@"row":@[@"翻转"]},
+                        @{@"section":@"仿真（三）",@"row":@[@"移动"]},
+                        @{@"section":@"仿真（四）",@"row":@[@"翻转"]},
                         @{@"section":@"场景",@"row":@[@"场景动画"]},];
     
     [self.view addSubview:self.tableView];
@@ -79,12 +81,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.section) {
         case 0: {
-            LEGOBaseViewController *vc = [[LEGOBaseViewController alloc] init];
+            LEGOCABasicViewController *vc = [[LEGOCABasicViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             }
             break;
         case 1: {
-            LEGOKeyFrameViewController *vc = [[LEGOKeyFrameViewController alloc] init];
+            LEGOCAKeyframeViewController *vc = [[LEGOCAKeyframeViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
@@ -104,11 +106,16 @@
         }
             break;
         case 5: {
-            LEGOSimuationViewController *vc = [[LEGOSimuationViewController alloc] init];
+            LEGOTransformViewController *vc = [[LEGOTransformViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case 6: {
+            LEGOCASpringViewController *vc = [[LEGOCASpringViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 7: {
             LEGOSceneViewController *vc = [[LEGOSceneViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }

@@ -1,8 +1,8 @@
 //
-//  LEGOBaseViewController.h
+//  LEGOSimuationViewController.h
 //  LEGOAnimation
 //
-//  Created by 杨庆人 on 2019/8/6.
+//  Created by 杨庆人 on 2019/8/9.
 //  Copyright © 2019年 杨庆人. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LEGOBaseViewController : UIViewController
+@interface LEGOCASpringViewController : UIViewController
 
 @end
 

@@ -11,13 +11,13 @@
 //  Copyright © 2019年 杨庆人. All rights reserved.
 //
 
-#import "LEGOSimuationView.h"
-@interface LEGOSimuationView ()
+#import "LEGOCASpringView.h"
+@interface LEGOCASpringView ()
 @property (nonatomic, strong) UIView *topView;
 @property (nonatomic, strong) UIView *sideView;
 @property (nonatomic, strong) UIView *bottomView;
 @end
-@implementation LEGOSimuationView
+@implementation LEGOCASpringView
 
 - (UIView *)topView {
     if (!_topView) {

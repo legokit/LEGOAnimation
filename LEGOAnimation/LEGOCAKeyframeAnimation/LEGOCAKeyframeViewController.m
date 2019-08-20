@@ -6,21 +6,21 @@
 //  Copyright © 2019年 杨庆人. All rights reserved.
 //
 
-#import "LEGOKeyFrameViewController.h"
+#import "LEGOCAKeyframeViewController.h"
 
-@interface LEGOKeyFrameViewController ()
+@interface LEGOCAKeyframeViewController ()
 @property (nonatomic, strong) UIView *keyFrameView;
 @property (nonatomic, strong) UIButton *keyFrameButton;
 @property (nonatomic, strong) UIButton *pathButton;
 @property (nonatomic, strong) UIButton *shakeButton;
 @end
 
-@implementation LEGOKeyFrameViewController
+@implementation LEGOCAKeyframeViewController
 
 - (UIView *)keyFrameView {
     if (!_keyFrameView) {
         _keyFrameView = [[UIView alloc] init];
-        _keyFrameView.backgroundColor = [UIColor redColor];
+        _keyFrameView.layer.borderWidth = 1;
     }
     return _keyFrameView;
 }
@@ -62,7 +62,8 @@
     [self.view addSubview:self.keyFrameView];
     [self.keyFrameView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(100, 100));
-        make.center.mas_equalTo(self.view);
+        make.centerX.mas_equalTo(self.view.mas_centerX);
+        make.centerY.mas_equalTo(self.view.mas_centerY).offset(-75);
     }];
     
     [self.view addSubview:self.keyFrameButton];
@@ -73,7 +74,7 @@
     
     [array mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedItemLength:80 leadSpacing:15 tailSpacing:15];
     [array mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.offset(-100);
+        make.bottom.offset(-175);
         make.height.mas_equalTo(80);
     }];
     

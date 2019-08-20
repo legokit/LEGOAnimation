@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LEGOKeyFrameViewController : UIViewController
+@interface LEGOCAKeyframeViewController : UIViewController
 
 @end
 

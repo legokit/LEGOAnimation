@@ -6,9 +6,9 @@
 //  Copyright © 2019年 杨庆人. All rights reserved.
 //
 
-#import "LEGOBaseViewController.h"
+#import "LEGOCABasicViewController.h"
 
-@interface LEGOBaseViewController ()
+@interface LEGOCABasicViewController ()
 @property (nonatomic, strong) UIView *zoomView;
 @property (nonatomic, strong) UIView *rotationView;
 @property (nonatomic, strong) UIView *gradualView;
@@ -19,12 +19,12 @@
 
 @end
 
-@implementation LEGOBaseViewController
+@implementation LEGOCABasicViewController
 
 - (UIView *)zoomView {
     if (!_zoomView) {
         _zoomView = [[UIView alloc] init];
-        _zoomView.backgroundColor = [UIColor blueColor];
+        _zoomView.layer.borderWidth = 1;
     }
     return _zoomView;
 }
@@ -32,7 +32,7 @@
 - (UIView *)rotationView {
     if (!_rotationView) {
         _rotationView = [[UIView alloc] init];
-        _rotationView.backgroundColor = [UIColor orangeColor];
+        _rotationView.layer.borderWidth = 1;
     }
     return _rotationView;
 }
@@ -40,7 +40,7 @@
 - (UIView *)gradualView {
     if (!_gradualView) {
         _gradualView = [[UIView alloc] init];
-        _gradualView.backgroundColor = [UIColor redColor];
+        _gradualView.layer.borderWidth = 1;
     }
     return _gradualView;
 }
@@ -111,54 +111,50 @@
 }
 
 -(void)zoomButtonClick:(id)sender {
-//    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-//    animation.toValue = [NSNumber numberWithFloat:0.75f];
-//    animation.duration = 1.0f;
-//    animation.removedOnCompletion = NO;
-//    animation.fillMode = kCAFillModeForwards;
-//    [self.zoomView.layer addAnimation:animation forKey:@"scaleAnimation"];
-
-    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        [self.zoomView.layer setValue:@(0.8) forKeyPath:@"transform.scale"];
-    } completion:^(BOOL finished) {
-        if (finished) {
-            [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                [self.zoomView.layer setValue:@(1) forKeyPath:@"transform.scale"];
-            } completion:nil];
-        }
-    }];
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    animation.fromValue = @(1);
+    animation.toValue = @(0.5);
+    animation.duration = 0.5f;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    [self.zoomView.layer addAnimation:animation forKey:@"scaleAnimation"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        animation.toValue = [NSNumber numberWithFloat:1];
+        animation.fromValue = @(0.5);
+        animation.toValue = @(1);
+        animation.removedOnCompletion = NO;
+        animation.fillMode = kCAFillModeForwards;
+        [self.zoomView.layer addAnimation:animation forKey:@"scaleAnimation"];
+    });
 }
 
 -(void)rotationButtonClick:(id)sender {
-//        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-//        animation.toValue = [NSNumber numberWithFloat:M_PI];
-//        animation.duration = 1.0f;
-//        [self.rotationView.layer addAnimation:animation forKey:@"rotateAnimation"];
-    
-    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        [self.rotationView.layer setValue:@(M_PI) forKeyPath:@"transform.rotation.z"];
-    } completion:^(BOOL finished) {
-        if (finished) {
-            [self.rotationView.layer setValue:@(0) forKeyPath:@"transform.rotation.z"];
-        }
-    }];
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.toValue = [NSNumber numberWithFloat:M_PI];
+    animation.duration = 1.0f;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    [self.rotationView.layer addAnimation:animation forKey:@"rotateAnimation"];
 }
 
 -(void)gradualButtonClick:(id)sender {
-    //    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
-    //    animation.toValue = (id)[UIColor greenColor].CGColor;
-    //    animation.duration = 1.0f;
-    //    [self.gradualView.layer addAnimation:animation forKey:@"gradualAnimation"];
-    
-    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        [self.gradualView.layer setValue:(id)[UIColor greenColor].CGColor forKeyPath:@"backgroundColor"];
-    } completion:^(BOOL finished) {
-        if (finished) {
-            [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                [self.gradualView.layer setValue:(id)[UIColor redColor].CGColor forKeyPath:@"backgroundColor"];
-            } completion:nil];
-        }
-    }];
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
+    animation.fromValue = (id)[UIColor clearColor].CGColor;
+    animation.toValue = (id)[UIColor grayColor].CGColor;
+    animation.duration = 0.5f;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    [self.gradualView.layer addAnimation:animation forKey:@"gradualAnimation"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
+        animation.fromValue = (id)[UIColor grayColor].CGColor;
+        animation.toValue = (id)[UIColor clearColor].CGColor;
+        animation.duration = 0.5f;
+        animation.removedOnCompletion = NO;
+        animation.fillMode = kCAFillModeForwards;
+        [self.gradualView.layer addAnimation:animation forKey:@"gradualAnimation"];
+    });
 }
 
 /*
