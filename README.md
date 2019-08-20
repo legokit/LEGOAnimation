@@ -15,8 +15,10 @@
 ![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOKnobAnimation.gif)
 
 ## 仿真（二）
-![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOSimulation1.gif)
+![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGORouletteAnimation.gif)
 
+## 仿真（三）
+![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOSimulation1.gif)
 
 ## Author
 
