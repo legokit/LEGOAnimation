@@ -17,6 +17,7 @@
 #import "LEGOKnobViewController.h"
 #import "LEGORouletteViewController.h"
 #import "LEGOTransformViewController.h"
+#import "LEGOShadowPathViewController.h"
 
 @interface LEGOViewController ()
 @property (nonatomic, strong) UITableView *tableView;
@@ -50,6 +51,7 @@
                         @{@"section":@"仿真（二）",@"row":@[@"轮盘"]},
                         @{@"section":@"仿真（三）",@"row":@[@"移动"]},
                         @{@"section":@"仿真（四）",@"row":@[@"翻转"]},
+                        @{@"section":@"仿真（五）",@"row":@[@"阴影"]},
                         @{@"section":@"场景",@"row":@[@"场景动画"]},];
     
     [self.view addSubview:self.tableView];
@@ -116,6 +118,12 @@
         }
             break;
         case 7: {
+            LEGOShadowPathViewController *vc = [[LEGOShadowPathViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        case 8: {
             LEGOSceneViewController *vc = [[LEGOSceneViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
