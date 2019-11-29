@@ -34,14 +34,13 @@
     [super viewDidLoad];
     
     self.title = @"iOS 动画";
-    
-    /** @{@"section":@"基础动画",@"row":@[@"缩放",@"旋转",@"渐变"],@"class":@"LEGOCABasicViewController"}，
-        @{@"section":@"关键帧",@"row":@[@"关键帧",@"路径",@"抖动"],@"class":@"LEGOCAKeyframeViewController"} */
+
     self.dataSource = @[
                         @{@"section":@"仿真（一）",@"row":@[@"旋转"],@"class":@"LEGOKnobViewController"},
                         @{@"section":@"仿真（二）",@"row":@[@"按下"],@"class":@"LEGOPressViewController"},
-                        @{@"section":@"仿真（二）",@"row":@[@"仪表盘"],@"class":@"LEGORouletteViewController"},
-                        @{@"section":@"仿真（四）",@"row":@[@"翻转"],@"class":@"LEGOCASpringViewController"},
+                        @{@"section":@"仿真（三）",@"row":@[@"仪表盘"],@"class":@"LEGORouletteViewController"},
+                        @{@"section":@"仿真（四）",@"row":@[@"3D 旋转"],@"class":@"LEGOTransformViewController"},
+                        @{@"section":@"仿真（五）",@"row":@[@"翻转"],@"class":@"LEGOCASpringViewController"},
                         ];
     
     [self.view addSubview:self.tableView];
