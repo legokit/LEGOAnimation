@@ -15,6 +15,12 @@
 ## 仿真（五）翻转
 ![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOSimulation1.gif)
 
+## 仿真（六）模拟重力感应
+![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOSwimAnimation1.gif)
+
+## 仿真（七）放大镜
+![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOMagnifierAnimation1.gif)
+
 ## Author
 
 564008993@qq.com, 564008993@qq.com
