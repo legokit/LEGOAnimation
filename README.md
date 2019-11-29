@@ -17,6 +17,9 @@
 ## 仿真（四）翻转
 ![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOSimulation1.gif)
 
+## 仿真（五）阴影
+![image](https://github.com/legokit/LEGOAnimation/blob/master/Resources/LEGOShadowPath1.gif)
+
 ## Author
 
 564008993@qq.com, 564008993@qq.com
