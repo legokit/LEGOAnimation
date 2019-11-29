@@ -1,44 +1,42 @@
-
-
 //
-//  LEGODynamicViewController.m
+//  LEGOPressViewController.m
 //  LEGOAnimation
 //
-//  Created by 杨庆人 on 2019/8/14.
-//  Copyright © 2019年 杨庆人. All rights reserved.
+//  Created by 杨庆人 on 2019/11/29.
+//  Copyright © 2019 杨庆人. All rights reserved.
 //
 
-#import "LEGOKnobViewController.h"
-#import "LEGOKnobView.h"
+#import "LEGOPressViewController.h"
+#import "LEGOPressView.h"
 
-@interface LEGOKnobViewController ()
-@property (nonatomic, strong) LEGOKnobView *knobView;
+@interface LEGOPressViewController ()
+@property (nonatomic, strong) LEGOPressView *pressView;
 @end
 
-@implementation LEGOKnobViewController
+@implementation LEGOPressViewController
 
-- (LEGOKnobView *)knobView {
-    if (!_knobView) {
-        _knobView = [[LEGOKnobView alloc] init];
+- (LEGOPressView *)pressView {
+    if (!_pressView) {
+        _pressView = [[LEGOPressView alloc] init];
     }
-    return _knobView;
+    return _pressView;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.knobView];
-    [self.knobView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.view addSubview:self.pressView];
+    [self.pressView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(150, 150));
         make.centerX.mas_equalTo(self.view.mas_centerX);
         make.centerY.mas_equalTo(self.view.mas_centerY).offset(-50);
     }];
     
     UILabel *label = [[UILabel alloc] init];
-    label.text = @"旋转";
+    label.text = @"按下";
     [self.view addSubview:label];
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.knobView.mas_bottom).offset(50);
+        make.top.mas_equalTo(self.pressView.mas_bottom).offset(50);
         make.centerX.mas_equalTo(self.view.mas_centerX);
     }];
     
@@ -56,3 +54,4 @@
 */
 
 @end
+

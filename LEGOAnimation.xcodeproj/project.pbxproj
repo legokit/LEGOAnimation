@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E82338D02390B381001DAED6 /* LEGOPressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E82338CF2390B381001DAED6 /* LEGOPressViewController.m */; };
+		E82338D32390B38D001DAED6 /* LEGOPressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E82338D22390B38D001DAED6 /* LEGOPressView.m */; };
+		E82338D62390B769001DAED6 /* LEGOHighlightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E82338D52390B768001DAED6 /* LEGOHighlightButton.m */; };
 		E8447BCC230BD50300F750E6 /* LEGOTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8447BCB230BD50300F750E6 /* LEGOTransformViewController.m */; };
 		E85B04F322DD6119001501A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E85B04F222DD6119001501A9 /* AppDelegate.m */; };
-		E85B04F622DD6119001501A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85B04F522DD6119001501A9 /* ViewController.m */; };
 		E85B04F922DD6119001501A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85B04F722DD6119001501A9 /* Main.storyboard */; };
 		E85B04FB22DD611A001501A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E85B04FA22DD611A001501A9 /* Assets.xcassets */; };
 		E85B04FE22DD611A001501A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85B04FC22DD611A001501A9 /* LaunchScreen.storyboard */; };
@@ -59,13 +61,17 @@
 		522B25FDEEEC2A1F834CC5BC /* libPods-LEGOAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LEGOAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A22625E8AF629AB2DAFEC682 /* Pods-LEGOAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEGOAnimation.debug.xcconfig"; path = "Target Support Files/Pods-LEGOAnimation/Pods-LEGOAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 		D5EB31E15C2ACDB4371F30D9 /* Pods-LEGOAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEGOAnimation.release.xcconfig"; path = "Target Support Files/Pods-LEGOAnimation/Pods-LEGOAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		E82338CE2390B381001DAED6 /* LEGOPressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOPressViewController.h; sourceTree = "<group>"; };
+		E82338CF2390B381001DAED6 /* LEGOPressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOPressViewController.m; sourceTree = "<group>"; };
+		E82338D12390B38D001DAED6 /* LEGOPressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOPressView.h; sourceTree = "<group>"; };
+		E82338D22390B38D001DAED6 /* LEGOPressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOPressView.m; sourceTree = "<group>"; };
+		E82338D42390B768001DAED6 /* LEGOHighlightButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGOHighlightButton.h; sourceTree = "<group>"; };
+		E82338D52390B768001DAED6 /* LEGOHighlightButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGOHighlightButton.m; sourceTree = "<group>"; };
 		E8447BCA230BD50300F750E6 /* LEGOTransformViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOTransformViewController.h; sourceTree = "<group>"; };
 		E8447BCB230BD50300F750E6 /* LEGOTransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOTransformViewController.m; sourceTree = "<group>"; };
 		E85B04EE22DD6119001501A9 /* LEGOAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEGOAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85B04F122DD6119001501A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E85B04F222DD6119001501A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E85B04F422DD6119001501A9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E85B04F522DD6119001501A9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E85B04F822DD6119001501A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E85B04FA22DD611A001501A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E85B04FD22DD611A001501A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -156,6 +162,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E82338CD2390B36E001DAED6 /* LEGOPressAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E82338CE2390B381001DAED6 /* LEGOPressViewController.h */,
+				E82338CF2390B381001DAED6 /* LEGOPressViewController.m */,
+				E82338D12390B38D001DAED6 /* LEGOPressView.h */,
+				E82338D22390B38D001DAED6 /* LEGOPressView.m */,
+			);
+			path = LEGOPressAnimation;
+			sourceTree = "<group>";
+		};
 		E8447BC9230BD4F300F750E6 /* LEGOTransformAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +207,7 @@
 		E85B04F022DD6119001501A9 /* LEGOAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				E82338CD2390B36E001DAED6 /* LEGOPressAnimation */,
 				E87423FC2302954800F76BFB /* LEGOSceneAnimation */,
 				E87C6AE3231515B70050B510 /* LEGOShadowPath */,
 				E87423F52302577400F76BFB /* LEGOCASpringAnimation */,
@@ -203,14 +221,14 @@
 				E85B04F222DD6119001501A9 /* AppDelegate.m */,
 				E871618C22F82CF3008B5EF7 /* LEGOViewController.h */,
 				E871618D22F82CF3008B5EF7 /* LEGOViewController.m */,
+				E82338D42390B768001DAED6 /* LEGOHighlightButton.h */,
+				E82338D52390B768001DAED6 /* LEGOHighlightButton.m */,
 				E871619522F83C16008B5EF7 /* PrefixHeader.pch */,
 				E85B04F722DD6119001501A9 /* Main.storyboard */,
 				E85B04FA22DD611A001501A9 /* Assets.xcassets */,
 				E85B04FC22DD611A001501A9 /* LaunchScreen.storyboard */,
 				E85B04FF22DD611A001501A9 /* Info.plist */,
 				E85B050022DD611A001501A9 /* main.m */,
-				E85B04F422DD6119001501A9 /* ViewController.h */,
-				E85B04F522DD6119001501A9 /* ViewController.m */,
 			);
 			path = LEGOAnimation;
 			sourceTree = "<group>";
@@ -481,21 +499,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E85B04F622DD6119001501A9 /* ViewController.m in Sources */,
 				E873B0612303EF2600DB81C1 /* LEGOCASpringView.m in Sources */,
 				E873B05723039D8A00DB81C1 /* LEGOKnobViewController.m in Sources */,
 				E862B36F2306A8330072D243 /* LEGORouletteView.m in Sources */,
 				E864518622F97A13002FD21B /* LEGOStretchViewController.m in Sources */,
 				E864518222F918E6002FD21B /* LEGOCABasicViewController.m in Sources */,
 				E871618E22F82CF3008B5EF7 /* LEGOViewController.m in Sources */,
+				E82338D62390B769001DAED6 /* LEGOHighlightButton.m in Sources */,
 				E873B05E2303DEF900DB81C1 /* LEGOKnobView.m in Sources */,
 				E8447BCC230BD50300F750E6 /* LEGOTransformViewController.m in Sources */,
 				E85B050122DD611A001501A9 /* main.m in Sources */,
 				E87424082302AAEC00F76BFB /* LEGODoraemonView.m in Sources */,
 				E864517F22F918B0002FD21B /* LEGOCAKeyframeViewController.m in Sources */,
 				E85B04F322DD6119001501A9 /* AppDelegate.m in Sources */,
+				E82338D32390B38D001DAED6 /* LEGOPressView.m in Sources */,
 				E87423F82302577400F76BFB /* LEGOCASpringViewController.m in Sources */,
 				E874240F2302D54900F76BFB /* LEGOSceneView.m in Sources */,
+				E82338D02390B381001DAED6 /* LEGOPressViewController.m in Sources */,
 				E862B36C2306A7B80072D243 /* LEGORouletteViewController.m in Sources */,
 				E87C6AE6231515CB0050B510 /* LEGOShadowPathViewController.m in Sources */,
 				E87423FF2302956A00F76BFB /* LEGOSceneViewController.m in Sources */,

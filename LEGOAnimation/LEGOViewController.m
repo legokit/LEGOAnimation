@@ -9,15 +9,6 @@
 
 #import "LEGOViewController.h"
 #import <Masonry/Masonry.h>
-#import "LEGOCABasicViewController.h"
-#import "LEGOCAKeyframeViewController.h"
-#import "LEGOStretchViewController.h"
-#import "LEGOCASpringViewController.h"
-#import "LEGOSceneViewController.h"
-#import "LEGOKnobViewController.h"
-#import "LEGORouletteViewController.h"
-#import "LEGOTransformViewController.h"
-#import "LEGOShadowPathViewController.h"
 
 @interface LEGOViewController ()
 @property (nonatomic, strong) UITableView *tableView;
@@ -44,15 +35,14 @@
     
     self.title = @"iOS 动画";
     
-    self.dataSource = @[@{@"section":@"基础动画",@"row":@[@"缩放",@"旋转",@"渐变"]},
-                        @{@"section":@"关键帧",@"row":@[@"关键帧",@"路径",@"抖动"]},
-                        @{@"section":@"形变",@"row":@[@"挤压",@"拉扯",@"形变"]},
-                        @{@"section":@"仿真（一）",@"row":@[@"旋钮"]},
-                        @{@"section":@"仿真（二）",@"row":@[@"轮盘"]},
-                        @{@"section":@"仿真（三）",@"row":@[@"移动"]},
-                        @{@"section":@"仿真（四）",@"row":@[@"翻转"]},
-                        @{@"section":@"仿真（五）",@"row":@[@"阴影"]},
-                        @{@"section":@"场景",@"row":@[@"场景动画"]},];
+    /** @{@"section":@"基础动画",@"row":@[@"缩放",@"旋转",@"渐变"],@"class":@"LEGOCABasicViewController"}，
+        @{@"section":@"关键帧",@"row":@[@"关键帧",@"路径",@"抖动"],@"class":@"LEGOCAKeyframeViewController"} */
+    self.dataSource = @[
+                        @{@"section":@"仿真（一）",@"row":@[@"旋转"],@"class":@"LEGOKnobViewController"},
+                        @{@"section":@"仿真（二）",@"row":@[@"按下"],@"class":@"LEGOPressViewController"},
+                        @{@"section":@"仿真（二）",@"row":@[@"仪表盘"],@"class":@"LEGORouletteViewController"},
+                        @{@"section":@"仿真（四）",@"row":@[@"翻转"],@"class":@"LEGOCASpringViewController"},
+                        ];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -81,56 +71,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    switch (indexPath.section) {
-        case 0: {
-            LEGOCABasicViewController *vc = [[LEGOCABasicViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            }
-            break;
-        case 1: {
-            LEGOCAKeyframeViewController *vc = [[LEGOCAKeyframeViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 2: {
-            LEGOStretchViewController *vc = [[LEGOStretchViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 3: {
-            LEGOKnobViewController *vc = [[LEGOKnobViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 4: {
-            LEGORouletteViewController *vc = [[LEGORouletteViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 5: {
-            LEGOTransformViewController *vc = [[LEGOTransformViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 6: {
-            LEGOCASpringViewController *vc = [[LEGOCASpringViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 7: {
-            LEGOShadowPathViewController *vc = [[LEGOShadowPathViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-            
-        case 8: {
-            LEGOSceneViewController *vc = [[LEGOSceneViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        default:
-            break;
-    }
+    NSDictionary *item = self.dataSource[indexPath.section];
+    Class class = NSClassFromString(item[@"class"]);
+    UIViewController *vc = [[class alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

@@ -1,30 +1,24 @@
-
-
-
 //
-//  LEGOKnobView.m
+//  LEGOPressView.m
 //  LEGOAnimation
 //
-//  Created by 杨庆人 on 2019/8/14.
-//  Copyright © 2019年 杨庆人. All rights reserved.
+//  Created by 杨庆人 on 2019/11/29.
+//  Copyright © 2019 杨庆人. All rights reserved.
 //
 
-#import "LEGOKnobView.h"
-#import "LEGOHighlightButton.h"
+#import "LEGOPressView.h"
 
-@interface LEGOKnobView ()
+@interface LEGOPressView ()
 @property (nonatomic, strong) UIImageView *bgView;
-@property (nonatomic, strong) UIImageView *knobView;
+@property (nonatomic, strong) UIImageView *pressView;
 
 @property (nonatomic, assign) CGPoint startLocation;
 @property (nonatomic, assign) CGFloat currAngle;
 
-@property (nonatomic, strong) LEGOHighlightButton *hotspotButton;
-
 
 @end
 
-@implementation LEGOKnobView
+@implementation LEGOPressView
 
 - (instancetype)init {
     if (self = [super init] ) {
@@ -36,26 +30,17 @@
 - (UIImageView *)bgView {
     if (!_bgView) {
         _bgView = [[UIImageView alloc] init];
-//        _bgView.backgroundColor = [UIColor blackColor];
         _bgView.layer.borderWidth = 1;
     }
     return _bgView;
 }
 
-- (UIImageView *)knobView {
-    if (!_knobView) {
-        _knobView = [[UIImageView alloc] init];
-        _knobView.layer.borderWidth = 1;
+- (UIImageView *)pressView {
+    if (!_pressView) {
+        _pressView = [[UIImageView alloc] init];
+        _pressView.layer.borderWidth = 1;
     }
-    return _knobView;
-}
-
-- (LEGOHighlightButton *)hotspotButton {
-    if (!_hotspotButton) {
-        _hotspotButton = [LEGOHighlightButton buttonWithType:UIButtonTypeCustom];
-        _hotspotButton.backgroundColor = [UIColor lightGrayColor];
-    }
-    return _hotspotButton;
+    return _pressView;
 }
 
 - (void)setKnobView {
@@ -63,51 +48,39 @@
     [self.bgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self);
     }];
-    [self addSubview:self.knobView];
-    [self.knobView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self addSubview:self.pressView];
+    [self.pressView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsMake(25, 25, 25, 25));
     }];
      
     UIView *lineH = [[UIView alloc] init];
     lineH.backgroundColor = [UIColor blackColor];
-    [self.knobView addSubview:lineH];
+    [self.pressView addSubview:lineH];
     [lineH mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(45);
         make.height.mas_equalTo(1);
-        make.center.mas_equalTo(self.knobView);
+        make.center.mas_equalTo(self.pressView);
     }];
     
     UIView *lineV = [[UIView alloc] init];
     lineV.backgroundColor = [UIColor blackColor];
-    [self.knobView addSubview:lineV];
+    [self.pressView addSubview:lineV];
     [lineV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(1);
         make.height.mas_equalTo(45);
-        make.center.mas_equalTo(self.knobView);
-    }];
-    
-    [self.knobView addSubview:self.hotspotButton];
-    [self.hotspotButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(25, 25));
-        make.bottom.mas_equalTo(self.knobView.mas_top);
-        make.centerX.mas_equalTo(self.knobView.mas_centerX);
+        make.center.mas_equalTo(self.pressView);
     }];
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.bgView.layer.cornerRadius = self.bounds.size.width / 2.0;
-    self.knobView.layer.cornerRadius = (self.bounds.size.width - 25 * 2) / 2.0;
+    self.pressView.layer.cornerRadius = (self.bounds.size.width - 25 * 2) / 2.0;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
-    CGPoint point = [touch locationInView:self.knobView];
-    if (CGRectContainsPoint(self.hotspotButton.frame, point)) {
-        [self.hotspotButton sendActionsForControlEvents:UIControlEventTouchDown];
-        self.startLocation = [touch locationInView:self];
-    }
-
+    self.startLocation = [touch locationInView:self];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -119,7 +92,7 @@
     CGPoint moveLocation = [touch locationInView:self];
     
     CGFloat Angle = [self getAnglesWithThreePoint:self.startLocation pointB:CGPointMake(self.bounds.size.width / 2.0, self.bounds.size.height / 2.0) pointC:moveLocation];
-
+    NSLog(@"startLocation=%@,moveLocation=%@",[NSValue valueWithCGPoint:self.startLocation],[NSValue valueWithCGPoint:moveLocation]);
     self.startLocation = moveLocation;
     self.currAngle += Angle;
     if (self.currAngle > M_PI * 2) {
@@ -130,7 +103,15 @@
     }
     NSLog(@"self.currAngle=%f",self.currAngle);
 //    self.knobView.transform = CGAffineTransformRotate(self.knobView.transform, Angle);
-    self.knobView.transform = CGAffineTransformRotate(CGAffineTransformIdentity, self.currAngle);
+    self.pressView.transform = CGAffineTransformRotate(CGAffineTransformIdentity, self.currAngle);
+
+    CGFloat xFactor = MIN(1, MAX(-1, (moveLocation.x - (self.bounds.size.width / 2.0)) / (self.bounds.size.width / 2.0)));
+    CGFloat yFactor = MIN(1, MAX(-1, (moveLocation.y - (self.bounds.size.height / 2.0)) / (self.bounds.size.height / 2.0)));
+    CATransform3D t = CATransform3DIdentity;
+    t.m34 = -1.0f / 500;
+    t = CATransform3DRotate(t, M_PI / 9 * yFactor, -1, 0, 0);
+    t = CATransform3DRotate(t, M_PI / 9 * xFactor, 0, 1, 0);
+    self.layer.transform = t;
 }
 
 -(CGFloat)getAnglesWithThreePoint:(CGPoint)pointA pointB:(CGPoint)pointB pointC:(CGPoint)pointC {
@@ -154,7 +135,6 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self.hotspotButton sendActionsForControlEvents:UIControlEventTouchCancel];
     self.startLocation = CGPointZero;
     [UIView animateWithDuration:0.25 animations:^{
         CATransform3D t = CATransform3DIdentity;
@@ -165,14 +145,5 @@
     }];
 }
 
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    CGPoint knobViewPoint = [self.knobView.layer convertPoint:point fromLayer:self.layer];
-    CGRect rect = self.hotspotButton.frame;
-    if (CGRectContainsPoint(rect, knobViewPoint)) {
-        return [super hitTest:point withEvent:event];
-    }
-    return nil;
-}
-
-
 @end
+

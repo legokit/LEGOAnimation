@@ -64,7 +64,7 @@
     }];
     
     UILabel *label = [[UILabel alloc] init];
-    label.text = @"轮盘";
+    label.text = @"仪表盘";
     [self.view addSubview:label];
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.rouletteView.mas_bottom);
