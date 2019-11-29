@@ -10,6 +10,11 @@
 		E82338D02390B381001DAED6 /* LEGOPressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E82338CF2390B381001DAED6 /* LEGOPressViewController.m */; };
 		E82338D32390B38D001DAED6 /* LEGOPressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E82338D22390B38D001DAED6 /* LEGOPressView.m */; };
 		E82338D62390B769001DAED6 /* LEGOHighlightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E82338D52390B768001DAED6 /* LEGOHighlightButton.m */; };
+		E82338DA2390FAFF001DAED6 /* LEGOSwimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E82338D92390FAFF001DAED6 /* LEGOSwimViewController.m */; };
+		E82338DD2390FB1F001DAED6 /* LEGOSwimView.m in Sources */ = {isa = PBXBuildFile; fileRef = E82338DC2390FB1F001DAED6 /* LEGOSwimView.m */; };
+		E82338E0239100FE001DAED6 /* LEGOMotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E82338DE239100FD001DAED6 /* LEGOMotionManager.m */; };
+		E82338E423911121001DAED6 /* LEGOMagnifierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E82338E323911121001DAED6 /* LEGOMagnifierViewController.m */; };
+		E82338E72391121F001DAED6 /* LEGOMagnifierView.m in Sources */ = {isa = PBXBuildFile; fileRef = E82338E52391121F001DAED6 /* LEGOMagnifierView.m */; };
 		E8447BCC230BD50300F750E6 /* LEGOTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8447BCB230BD50300F750E6 /* LEGOTransformViewController.m */; };
 		E85B04F322DD6119001501A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E85B04F222DD6119001501A9 /* AppDelegate.m */; };
 		E85B04F922DD6119001501A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85B04F722DD6119001501A9 /* Main.storyboard */; };
@@ -67,6 +72,16 @@
 		E82338D22390B38D001DAED6 /* LEGOPressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOPressView.m; sourceTree = "<group>"; };
 		E82338D42390B768001DAED6 /* LEGOHighlightButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGOHighlightButton.h; sourceTree = "<group>"; };
 		E82338D52390B768001DAED6 /* LEGOHighlightButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGOHighlightButton.m; sourceTree = "<group>"; };
+		E82338D82390FAFF001DAED6 /* LEGOSwimViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOSwimViewController.h; sourceTree = "<group>"; };
+		E82338D92390FAFF001DAED6 /* LEGOSwimViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOSwimViewController.m; sourceTree = "<group>"; };
+		E82338DB2390FB1F001DAED6 /* LEGOSwimView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOSwimView.h; sourceTree = "<group>"; };
+		E82338DC2390FB1F001DAED6 /* LEGOSwimView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOSwimView.m; sourceTree = "<group>"; };
+		E82338DE239100FD001DAED6 /* LEGOMotionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGOMotionManager.m; sourceTree = "<group>"; };
+		E82338DF239100FE001DAED6 /* LEGOMotionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGOMotionManager.h; sourceTree = "<group>"; };
+		E82338E223911121001DAED6 /* LEGOMagnifierViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOMagnifierViewController.h; sourceTree = "<group>"; };
+		E82338E323911121001DAED6 /* LEGOMagnifierViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOMagnifierViewController.m; sourceTree = "<group>"; };
+		E82338E52391121F001DAED6 /* LEGOMagnifierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGOMagnifierView.m; sourceTree = "<group>"; };
+		E82338E62391121F001DAED6 /* LEGOMagnifierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGOMagnifierView.h; sourceTree = "<group>"; };
 		E8447BCA230BD50300F750E6 /* LEGOTransformViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGOTransformViewController.h; sourceTree = "<group>"; };
 		E8447BCB230BD50300F750E6 /* LEGOTransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEGOTransformViewController.m; sourceTree = "<group>"; };
 		E85B04EE22DD6119001501A9 /* LEGOAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEGOAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +188,30 @@
 			path = LEGOPressAnimation;
 			sourceTree = "<group>";
 		};
+		E82338D72390FAED001DAED6 /* LEGOSwimAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E82338D82390FAFF001DAED6 /* LEGOSwimViewController.h */,
+				E82338D92390FAFF001DAED6 /* LEGOSwimViewController.m */,
+				E82338DF239100FE001DAED6 /* LEGOMotionManager.h */,
+				E82338DE239100FD001DAED6 /* LEGOMotionManager.m */,
+				E82338DB2390FB1F001DAED6 /* LEGOSwimView.h */,
+				E82338DC2390FB1F001DAED6 /* LEGOSwimView.m */,
+			);
+			path = LEGOSwimAnimation;
+			sourceTree = "<group>";
+		};
+		E82338E12391110F001DAED6 /* LEGOMagnifierAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E82338E223911121001DAED6 /* LEGOMagnifierViewController.h */,
+				E82338E323911121001DAED6 /* LEGOMagnifierViewController.m */,
+				E82338E62391121F001DAED6 /* LEGOMagnifierView.h */,
+				E82338E52391121F001DAED6 /* LEGOMagnifierView.m */,
+			);
+			path = LEGOMagnifierAnimation;
+			sourceTree = "<group>";
+		};
 		E8447BC9230BD4F300F750E6 /* LEGOTransformAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +246,8 @@
 		E85B04F022DD6119001501A9 /* LEGOAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				E82338E12391110F001DAED6 /* LEGOMagnifierAnimation */,
+				E82338D72390FAED001DAED6 /* LEGOSwimAnimation */,
 				E82338CD2390B36E001DAED6 /* LEGOPressAnimation */,
 				E87423FC2302954800F76BFB /* LEGOSceneAnimation */,
 				E87C6AE3231515B70050B510 /* LEGOShadowPath */,
@@ -499,8 +540,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82338E423911121001DAED6 /* LEGOMagnifierViewController.m in Sources */,
 				E873B0612303EF2600DB81C1 /* LEGOCASpringView.m in Sources */,
 				E873B05723039D8A00DB81C1 /* LEGOKnobViewController.m in Sources */,
+				E82338E0239100FE001DAED6 /* LEGOMotionManager.m in Sources */,
 				E862B36F2306A8330072D243 /* LEGORouletteView.m in Sources */,
 				E864518622F97A13002FD21B /* LEGOStretchViewController.m in Sources */,
 				E864518222F918E6002FD21B /* LEGOCABasicViewController.m in Sources */,
@@ -508,7 +551,9 @@
 				E82338D62390B769001DAED6 /* LEGOHighlightButton.m in Sources */,
 				E873B05E2303DEF900DB81C1 /* LEGOKnobView.m in Sources */,
 				E8447BCC230BD50300F750E6 /* LEGOTransformViewController.m in Sources */,
+				E82338DD2390FB1F001DAED6 /* LEGOSwimView.m in Sources */,
 				E85B050122DD611A001501A9 /* main.m in Sources */,
+				E82338E72391121F001DAED6 /* LEGOMagnifierView.m in Sources */,
 				E87424082302AAEC00F76BFB /* LEGODoraemonView.m in Sources */,
 				E864517F22F918B0002FD21B /* LEGOCAKeyframeViewController.m in Sources */,
 				E85B04F322DD6119001501A9 /* AppDelegate.m in Sources */,
@@ -516,6 +561,7 @@
 				E87423F82302577400F76BFB /* LEGOCASpringViewController.m in Sources */,
 				E874240F2302D54900F76BFB /* LEGOSceneView.m in Sources */,
 				E82338D02390B381001DAED6 /* LEGOPressViewController.m in Sources */,
+				E82338DA2390FAFF001DAED6 /* LEGOSwimViewController.m in Sources */,
 				E862B36C2306A7B80072D243 /* LEGORouletteViewController.m in Sources */,
 				E87C6AE6231515CB0050B510 /* LEGOShadowPathViewController.m in Sources */,
 				E87423FF2302956A00F76BFB /* LEGOSceneViewController.m in Sources */,

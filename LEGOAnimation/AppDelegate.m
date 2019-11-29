@@ -20,11 +20,9 @@
 
     LEGOViewController *vc = [[LEGOViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    nav.navigationBar.translucent = NO;
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
-    nav.navigationBar.translucent = NO;
    
     // Override point for customization after application launch.
     return YES;

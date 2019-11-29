@@ -41,6 +41,8 @@
                         @{@"section":@"仿真（三）",@"row":@[@"仪表盘"],@"class":@"LEGORouletteViewController"},
                         @{@"section":@"仿真（四）",@"row":@[@"3D 旋转"],@"class":@"LEGOTransformViewController"},
                         @{@"section":@"仿真（五）",@"row":@[@"翻转"],@"class":@"LEGOCASpringViewController"},
+                        @{@"section":@"仿真（六）",@"row":@[@"模拟重力感应"],@"class":@"LEGOSwimViewController"},
+                        @{@"section":@"仿真（七）",@"row":@[@"放大镜"],@"class":@"LEGOMagnifierViewController"}
                         ];
     
     [self.view addSubview:self.tableView];
